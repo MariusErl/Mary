@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Obfuscar.2.2.29\build\obfuscar.props" Condition="Exists('packages\Obfuscar.2.2.29\build\obfuscar.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7A0B9A4A-3876-4B80-A0D8-428D5895DDA1}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mary</RootNamespace>
+    <AssemblyName>Mary</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>9787CC5A9F0A4A25D90F9594EF1D7EFBD6A861D7</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>MaryV2_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>test.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Mary.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminCheck.cs" />
+    <Compile Include="ButtonFactory.cs" />
+    <Compile Include="ChatAutomatics.cs" />
+    <Compile Include="Clients.cs" />
+    <Compile Include="Commands.cs" />
+    <Compile Include="MinimapForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinimapForm.Designer.cs">
+      <DependentUpon>MinimapForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LibData.cs" />
+    <Compile Include="Lib\InSimDotNet\BindingManager.cs" />
+    <Compile Include="Lib\InSimDotNet\CSCAction.cs" />
+    <Compile Include="Lib\InSimDotNet\DisconnectedEventArgs.cs" />
+    <Compile Include="Lib\InSimDotNet\DisconnectReason.cs" />
+    <Compile Include="Lib\InSimDotNet\GlobalSuppressions.cs" />
+    <Compile Include="Lib\InSimDotNet\Helpers\CarHelper.cs" />
+    <Compile Include="Lib\InSimDotNet\Helpers\HandicapHelper.cs" />
+    <Compile Include="Lib\InSimDotNet\Helpers\MathHelper.cs" />
+    <Compile Include="Lib\InSimDotNet\Helpers\ObjectHelper.cs" />
+    <Compile Include="Lib\InSimDotNet\Helpers\StringHelper.cs" />
+    <Compile Include="Lib\InSimDotNet\Helpers\TrackHelper.cs" />
+    <Compile Include="Lib\InSimDotNet\InitializeEventArgs.cs" />
+    <Compile Include="Lib\InSimDotNet\InSim.cs" />
+    <Compile Include="Lib\InSimDotNet\InSimErrorEventArgs.cs" />
+    <Compile Include="Lib\InSimDotNet\InSimException.cs" />
+    <Compile Include="Lib\InSimDotNet\InSimSettings.cs" />
+    <Compile Include="Lib\InSimDotNet\LfsEncoding.cs" />
+    <Compile Include="Lib\InSimDotNet\LfsUnicodeEncoding.cs" />
+    <Compile Include="Lib\InSimDotNet\LfsUnicodeEncoding2.cs" />
+    <Compile Include="Lib\InSimDotNet\NativeMethods.cs" />
+    <Compile Include="Lib\InSimDotNet\Out\DashLightFlags.cs" />
+    <Compile Include="Lib\InSimDotNet\Out\OutClient.cs" />
+    <Compile Include="Lib\InSimDotNet\Out\OutErrorEventArgs.cs" />
+    <Compile Include="Lib\InSimDotNet\Out\OutGauge.cs" />
+    <Compile Include="Lib\InSimDotNet\Out\OutGaugeEventArgs.cs" />
+    <Compile Include="Lib\InSimDotNet\Out\OutGaugeFlags.cs" />
+    <Compile Include="Lib\InSimDotNet\Out\OutGaugePack.cs" />
+    <Compile Include="Lib\InSimDotNet\Out\OutSim.cs" />
+    <Compile Include="Lib\InSimDotNet\Out\OutSimEventArgs.cs" />
+    <Compile Include="Lib\InSimDotNet\Out\OutSimPack.cs" />
+    <Compile Include="Lib\InSimDotNet\PacketDataEventArgs.cs" />
+    <Compile Include="Lib\InSimDotNet\PacketEventArgs.cs" />
+    <Compile Include="Lib\InSimDotNet\PacketFactory.cs" />
+    <Compile Include="Lib\InSimDotNet\PacketReader.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\ActionFlags.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\AdminResult.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\BulbInfo.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\ButtonFunction.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\ButtonStyles.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\CarContact.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\CarContOBJ.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\CarFlags.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\CarHCP.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\CharacterModifiers.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\ClickFlags.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\CompCar.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\CompCarFlags.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\ConfirmationFlags.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\ContactFlags.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\FlagType.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\HInfo.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\HlvcFlags.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\HostFlags.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\HostType.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\InSimFlags.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IPacket.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IR_ARP.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IR_ARQ.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IR_ERR.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IR_HLR.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IR_HOS.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IR_SEL.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\ISendable.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_ACR.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_AXI.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_AXM.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_AXO.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_BFN.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_BTC.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_BTN.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_BTT.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_CCH.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_CIM.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_CNL.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_CON.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_CPP.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_CPR.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_CRS.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_CSC.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_FIN.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_FLG.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_HCP.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_HLV.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_III.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_ISI.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_ISM.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_JRR.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_LAP.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_MCI.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_MOD.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_MSL.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_MSO.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_MST.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_MSX.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_MTC.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_NCI.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_NCN.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_NLP.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_NPL.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_OBH.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_OCO.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_PEN.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_PFL.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_PIT.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_PLA.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_PLC.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_PLL.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_PLP.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_PSF.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_REO.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_RES.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_RIP.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_RST.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_SCC.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_SCH.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_SFP.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_SLC.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_SMALL.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_SPX.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_SSH.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_STA.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_TINY.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_TOC.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_TTC.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_UCO.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_VER.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\IS_VTN.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\JrrAction.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\LeaveReason.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\LfsLanguage.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\LocalCarSwitches.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\MessageSound.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\ModeIdentifier.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\NodeLap.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\ObjectFlags.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\ObjectInfo.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\OCOAction.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\OCOIndex.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\PacketType.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\PassengerFlags.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\PenaltyReason.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\PenaltyValue.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\PitLaneFact.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\PitWorkFlags.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\PlayerFlags.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\PlayerTypes.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\RaceFlags.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\RelayError.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\ReplayError.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\ReplayMode.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\ReplayOptions.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\ScreenshotError.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\SetupFlags.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\SmallType.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\StateFlags.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\TinyType.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\TtcType.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\TyreCompound.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\Tyres.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\UCOAction.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\UserType.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\ViewIndentifier.cs" />
+    <Compile Include="Lib\InSimDotNet\Packets\VoteAction.cs" />
+    <Compile Include="Lib\InSimDotNet\PacketWriter.cs" />
+    <Compile Include="Lib\InSimDotNet\Properties\AssemblyInfo.cs" />
+    <Compile Include="Lib\InSimDotNet\ReadOnlyInSimSettings.cs" />
+    <Compile Include="Lib\InSimDotNet\StringResources.Designer.cs" />
+    <Compile Include="Lib\InSimDotNet\TcpSocket.cs" />
+    <Compile Include="Lib\InSimDotNet\UdpSocket.cs" />
+    <Compile Include="Lib\InSimDotNet\Vec.cs" />
+    <Compile Include="Lib\InSimDotNet\Vector.cs" />
+    <Compile Include="DefaultMinimap.cs" />
+    <Compile Include="Path.cs" />
+    <Compile Include="Performance.cs" />
+    <Compile Include="DUM.cs" />
+    <Compile Include="Identification.cs" />
+    <Compile Include="Pitstop.cs" />
+    <Compile Include="Progressbar.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Memory.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SkinCheck.cs" />
+    <Compile Include="Statistics.cs" />
+    <Compile Include="Tracker.cs" />
+    <Compile Include="CruiseControl.cs" />
+    <Compile Include="KeyboardHook.cs" />
+    <Compile Include="Messages.cs" />
+    <Compile Include="Outgauge.cs" />
+    <Compile Include="Roleplay.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Tracks.cs" />
+    <Compile Include="Trip.cs" />
+    <Compile Include="UnicodeEncoding.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MinimapForm.resx">
+      <DependentUpon>MinimapForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lib\InSimDotNet\StringResources.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Lib\InSimDotNet\InSimDotNet.csproj" />
+    <None Include="app.config" />
+    <Content Include="test.ico" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Lib\InSimDotNet\InSimDotNet.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="AfterCompile">
+    <!-- <Exec Command="if &quot;$(PlatformName)&quot; == &quot;AnyCPU&quot; (if &quot;$(ConfigurationName)&quot; == &quot;Release&quot; (powershell.exe  -ExecutionPolicy Bypass -File  &quot;$(ProjectDir)confuserEx\confuserps.ps1&quot; &quot;'C:\Users\Marius\Downloads\ConfuserEx-master\Build\7z.exe'&quot; &quot;'$(ProjectDir)confuserEx\confuser.crproj'&quot; &quot;'$(ProjectDir)obj\$(ConfigurationName)\'&quot; &quot;'$(ProjectDir)obj\$(ConfigurationName)\$(TargetFileName)'&quot; &quot;$(ProjectDir)bin\$(ConfigurationName)&quot;)&#xD;&#xA;) else (if &quot;$(ConfigurationName)&quot; == &quot;Release&quot; (powershell.exe  -ExecutionPolicy Bypass -File  &quot;$(ProjectDir)confuserEx\confuserps.ps1&quot; &quot;'C:\Users\Marius\Downloads\ConfuserEx-master\Build\7z.exe'&quot; &quot;'$(ProjectDir)confuserEx\confuser.crproj'&quot; &quot;'$(ProjectDir)obj\$(PlatformName)\$(ConfigurationName)\'&quot; &quot;'$(ProjectDir)obj\$(PlatformName)\$(ConfigurationName)\$(TargetFileName)'&quot; &quot;$(ProjectDir)bin\$(PlatformName)\$(ConfigurationName)&quot;)&#xD;&#xA;)" />
+  -->
+  </Target>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Obfuscar.2.2.29\build\obfuscar.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Obfuscar.2.2.29\build\obfuscar.props'))" />
+  </Target>
+</Project>
